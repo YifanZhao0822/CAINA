@@ -1,0 +1,56 @@
+# data parameters
+dataset: LS_3CFRGB
+train_data_path:
+val_data_path: 
+resume: 
+extract: False
+batch_size: 16
+val_size: 1000
+image_shape: [128, 128, 20]
+mask_batch_same: True
+max_delta_shape: [32, 32]
+
+# training parameters
+expname:
+save_path:
+cuda: True
+gpu_ids: [0]    # set the GPU ids to use, e.g. [0] or [1, 2]
+num_workers: 4
+lr: 0.01
+beta1: 0.5
+beta2: 0.9
+n_critic: 5
+nepoch: 80
+num_cv: 1
+print_iter: 100
+viz_iter: 1000
+viz_max_out: 16
+snapshot_save_iter: 5000
+patience: 100
+early_stop: False
+lr_decay: True
+
+# cloudy loss
+cloudy_weight: 0.9
+free_weight: 0.1
+  
+# architecture
+in_channels: 12
+out_channels: 3
+img_channels: 3
+feat: 256
+activation: relu
+kernel_size: 3
+num_layers: 12
+num_fusion_layers: 8
+temporal_window: 1
+use_mask: True
+downsample_factor: 3
+depth: 32
+
+global_weight: 0.45
+patch_weight: 0.55
+
+
+# model selection
+selected_model: unet
