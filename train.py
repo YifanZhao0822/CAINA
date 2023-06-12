@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader, Subset
 from dataset.rgb_dataset import TriDatasetRGB
 from loss_metric import evaluate
 
-from models.unet import UNet
+from models.mdrn_unet_st_caina import UNet
 from utils.tools import get_config
 
 
